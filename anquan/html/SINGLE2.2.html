@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/mui.css"/>
+		<script src="../js/jquery3_4_1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/mui.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		body{background-color: gray;}
+				.mui-slider-group{color: #2AC845;margin-left: 2px;margin-right: 2px;}
+		.mui-slider-group img{height: 300px;}
+		#page{width: 80px;}
+		span{display: none;}
+		
+	</style>
+	<script type="text/javascript">
+		mui.init();
+	</script>
+	</head> 
+	<body>
+		<div class="mui-slider">
+			<div  class="mui-slider-group ">
+				
+			</div>
+	</div>
+	<p class="jump" onclick="jumpto()" style="color: #007AFF;font-weight: 1000;margin-left: 5px;font-family: 'arial black'; ">跳转第
+	<input type="number" id="page"  placeholder="1"  /> 页
+	</p>
+		
+		
+	
+	
+	
+	
+	
+	<script type="text/javascript"> 
+		var gallery = mui('.mui-slider');
+		gallery.slider({
+		  interval:500//自动轮播周期，若为0则不自动播放，默认为0；
+		});
+		
+			for(var i=1;i<79;i++){
+				$(".mui-slider-group").append('<div class="mui-slider-item"></div>');
+				$(".mui-slider-item:nth-of-type(" + i +")").load("../doc/s" +i +".html ");
+			}
+		
+		
+		function jumpto(){
+			var gallery = mui('.mui-slider');
+		//alert(gallery.length);
+			gallery.slider().gotoItem($("#page").val()-1);
+			
+		} 
+		 document.querySelector('.mui-slider').addEventListener('slide', function(event) {
+		   //注意slideNumber是从0开始的；
+		 		//alert(event.detail.slideNumber);
+		  //  alert("你正在看第"+(event.detail.slideNumber+1)+"张图片");
+				
+	}); 
+	
+	
+			
+			
+			
+	
+			$(document).on("click","button",function(){
+				$(this).prev().toggle();
+				
+			});
+		
+	
+	
+	
+		 
+			 
+		
+				  
+		</script>
+		
+	</body>
+</html>
