@@ -1,0 +1,20 @@
+[null, {
+    "data": [{
+        "path": "public/lunbo/2.png"
+    }, {
+        "path": "public/lunbo/3.png"
+    }, {
+        "path": "public/lunbo/4.png"
+    }, {
+        "path": "public/lunbo/5.png"
+    }],
+    "errMsg": "request:ok",
+    "header": {
+        "access-control-allow-origin": "*",
+        "connection": "keep-alive",
+        "content-length": "167",
+        "date": "Sat, 25 Jul 2020 14:53:34 GMT",
+        "x-powered-by": "Express"
+    },
+    "statusCode": 200
+}]
